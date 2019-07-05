@@ -39,11 +39,17 @@ it('Should call prop onClick once when click button.', () => {
   const wrapper = shallow(
     <Button id="click-me" onClick={spyOnClick}>
       Click Me
-    </Button>
+    </Button>,
   )
 
   wrapper.find('#click-me').simulate('click')
   expect(spyOnClick).toHaveBeenCalledTimes(1)
+})
+
+it('Render button with correct text and id.', () => {
+  const wrapper = shallow(<Button id="click-gu">Click Gu</Button>)
+
+  expect(wrapper).toMatchInlineSnapshot()
 })
 ```
 
