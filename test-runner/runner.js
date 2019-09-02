@@ -1,10 +1,11 @@
+const { pass, failed } = require('./test-utilities')
+
 function it(testName, testFunction) {
   try {
     testFunction()
-    console.log(`✔ ${testName}`)
+    pass(testName)
   } catch (e) {
-    console.log(`✘ ${testName}`)
-    console.log(`  ${e.message}`)
+    failed(testName, e.message)
   }
 }
 
