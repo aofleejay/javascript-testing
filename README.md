@@ -8,17 +8,17 @@ Learn how to write test in JavaScript.
 
 ### Testing Framework
 
-Getting familair with testing framework by building [your own framework](https://github.com/aofleejay/testing-in-javascript/tree/master/testing-framework) from scratch.
+- Getting familair with testing framework by building [your own framework](https://github.com/aofleejay/testing-in-javascript/tree/master/testing-framework) from scratch.
 
 ### Basic Testing
 
-Basic testing by writing test for [calculator](https://github.com/aofleejay/testing-in-javascript/tree/master/calculator) module.
+- Basic testing by writing test for [calculator](https://github.com/aofleejay/testing-in-javascript/tree/master/calculator) module.
 
 ### React Testing
 
-Basic React testing by test [counter](https://github.com/aofleejay/testing-in-javascript/tree/master/counter) application.
+- Basic React testing by test [counter](https://github.com/aofleejay/testing-in-javascript/tree/master/counter) application.
 
-Integration testing in React by test [twitter](https://github.com/aofleejay/testing-in-javascript/tree/master/twitter) application.
+- Integration testing in React by test [twitter](https://github.com/aofleejay/testing-in-javascript/tree/master/twitter) application.
 
 ## :chart_with_upwards_trend: Slide
 
