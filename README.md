@@ -14,6 +14,10 @@ Getting familair with testing framework by building [your own framework](https:/
 
 Basic testing by writing test for [calculator](https://github.com/aofleejay/testing-in-javascript/tree/master/calculator) module.
 
+### React Testing
+
+Basic React testing by test [counter](https://github.com/aofleejay/testing-in-javascript/tree/master/counter) application.
+
 ## :chart_with_upwards_trend: Slide
 
 - [JavaScript Testing](https://github.com/aofleejay/sharing-resources/tree/master/testing-in-javascript)
