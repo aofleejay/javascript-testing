@@ -1,5 +1,7 @@
 # JavaScript Testing
 
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 Learn how to write test in JavaScript.
 
 ## :memo: Outline
