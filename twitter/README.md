@@ -1,4 +1,6 @@
-# Twitter.
+# React Integration Testing.
+
+Integration testing in React by test twitter application.
 
 ## Quick start.
 
