@@ -1,5 +1,10 @@
 const { pass, failed } = require('./test-utilities')
 
+function describe(name, callback) {
+  console.log(name)
+  callback()
+}
+
 function it(testName, testFunction) {
   try {
     testFunction()
@@ -21,5 +26,7 @@ function expect(actualValue) {
   }
 }
 
+global.describe = describe
 global.it = it
+global.test = it
 global.expect = expect
