@@ -17,16 +17,21 @@ class Twitter extends Component {
       { tweets: [...this.state.tweets, { text: this.state.inputText }] },
       () => {
         this.setState({ inputText: '' })
-      }
+      },
     )
   }
 
   render() {
     return (
-      <div id="twitter-board" className="twitter-board">
+      <div
+        id="twitter-board"
+        data-testid="twitter-board"
+        className="twitter-board"
+      >
         <form id="tweet-form" onSubmit={this.submitTweet}>
           <input
             id="tweet-text"
+            data-testid="tweet-text"
             className="tweet-text"
             type="text"
             value={this.state.inputText}
@@ -34,6 +39,7 @@ class Twitter extends Component {
           />
           <input
             id="tweet-button"
+            data-testid="tweet-button"
             className="tweet-button"
             type="submit"
             value="tweet"

@@ -1,20 +1,22 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme'
+import { render, fireEvent } from '@testing-library/react'
 import Twitter from './Twitter'
 
 it('Contain twitter board.', () => {
-  const wrapper = shallow(<Twitter />)
+  const { getByTestId } = render(<Twitter />)
 
-  expect(wrapper.find('#twitter-board')).toHaveLength(1)
+  expect(getByTestId('twitter-board')).toBeVisible()
 })
 
 it('Render a tweet after simulate submit tweet event.', () => {
   const event = { target: { value: 'Hello' } }
-  const wrapper = mount(<Twitter />)
+  const { getByTestId, getByText } = render(<Twitter />)
 
-  wrapper.find('#tweet-text').simulate('change', event)
-  wrapper.find('#tweet-button').simulate('submit')
+  const tweetTextInput = getByTestId('tweet-text')
+  fireEvent.change(tweetTextInput, event)
+  const tweetButton = getByTestId('tweet-button')
+  fireEvent.click(tweetButton)
 
-  expect(wrapper.find('.tweet-item')).toHaveLength(1)
-  expect(wrapper.find('#tweet-text').props().value).toEqual('')
+  expect(getByText('Hello')).toBeVisible()
+  expect(tweetTextInput).toHaveTextContent('')
 })
