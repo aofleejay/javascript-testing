@@ -18,7 +18,9 @@ class Counter extends Component {
         <Button id="decrement" onClick={this.decrement}>
           -
         </Button>
-        <span id="counter">{this.state.counter}</span>
+        <span id="counter" data-testid="counter">
+          {this.state.counter}
+        </span>
         <Button id="increment" onClick={this.increment}>
           +
         </Button>

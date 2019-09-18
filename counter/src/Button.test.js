@@ -1,33 +1,35 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { render, fireEvent } from '@testing-library/react'
 import Button from './Button'
 
 it('Render correct children.', () => {
-  const wrapper = shallow(<Button id="click-me">Click Me</Button>)
+  const { container } = render(<Button>Click Me</Button>)
 
-  expect(wrapper.find('#click-me').text()).toEqual('Click Me')
+  expect(container).toHaveTextContent('Click Me')
 })
 
 it('Should call prop onClick once when click button.', () => {
   const spyOnClick = jest.fn()
-  const wrapper = shallow(
+  const { getByText } = render(
     <Button id="click-me" onClick={spyOnClick}>
       Click Me
     </Button>,
   )
 
-  wrapper.find('#click-me').simulate('click')
+  const button = getByText(/click me/i)
+  fireEvent.click(button)
+
   expect(spyOnClick).toHaveBeenCalledTimes(1)
 })
 
 it('Render button with correct text and id.', () => {
-  const wrapper = shallow(<Button id="click-gu">Click Gu</Button>)
+  const { container } = render(<Button id="click-me">Click Me</Button>)
 
-  expect(wrapper).toMatchInlineSnapshot(`
+  expect(container.firstChild).toMatchInlineSnapshot(`
     <button
-      id="click-gu"
+      id="click-me"
     >
-      Click Gu
+      Click Me
     </button>
   `)
 })
