@@ -16,7 +16,7 @@ describe('Test calculator module', () => {
       expect(sub(1, 1)).toBe(0)
     })
 
-    it('2 - 1 should equal to 0.', () => {
+    it('2 - 1 should equal to 1.', () => {
       expect(sub(2, 1)).toBe(1)
     })
   })
